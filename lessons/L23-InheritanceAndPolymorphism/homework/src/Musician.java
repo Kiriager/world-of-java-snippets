@@ -1,7 +1,10 @@
 public class Musician extends Person {
   private String instrument;
 
-  public Musician (String name, String instrument) {
+  public Musician() {
+  }
+
+  public Musician(String name, String instrument) {
     super(name);
     this.instrument = instrument;
   }
@@ -15,6 +18,11 @@ public class Musician extends Person {
   }
 
   public void playMusic() {
-    System.out.println(getName() + " is palying " + instrument);  
+    System.out.println(getName() + " is palying " + instrument + ".");
+  }
+
+  @Override
+  public void sayHello() {
+    System.out.println(getName() + " says hey-hey la-la-la!");
   }
 }

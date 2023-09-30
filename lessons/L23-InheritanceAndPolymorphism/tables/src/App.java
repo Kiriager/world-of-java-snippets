@@ -1,4 +1,4 @@
-public class Example1 {
+public class App {
   public static void main(String[] args) {
     Table myTable = new Table(4, "square");
     Desk myDesk = new Desk(4, "rectangular", 5);
