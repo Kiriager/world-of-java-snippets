@@ -1,4 +1,4 @@
-public class CoffeMachine {
+public class CoffeeMachine {
     private static final int COFFEE_PER_CUP = 20;
     private static final int MILK_PER_CUP = 15;
     private static final int SUGAR_PORTION_VOLUME = 5;
@@ -11,19 +11,19 @@ public class CoffeMachine {
     private static int basePrice = DEFAULT_BASE_PRICE;
     private static int priceIncrement = DEFAULT_PRICE_INCREMENT;
 
-    Container coffeeContainer;
-    Container milkContainer;
-    Container sugarContainer;
+    private Container coffeeContainer;
+    private Container milkContainer;
+    private Container sugarContainer;
     
     private int money = 0;
 
-    public CoffeMachine() {
+    public CoffeeMachine() {
         coffeeContainer = new Container(DEFAULT_CONTAINER_VOLUME);
         milkContainer = new Container(DEFAULT_CONTAINER_VOLUME);
         sugarContainer = new Container(DEFAULT_CONTAINER_VOLUME);
     }
 
-    public CoffeMachine(int milkContainerVolume, int coffeeContainerVolume, int sugarContainerVolume) {
+    public CoffeeMachine(int milkContainerVolume, int coffeeContainerVolume, int sugarContainerVolume) {
         coffeeContainer = new Container(coffeeContainerVolume);
         milkContainer = new Container(milkContainerVolume);
         sugarContainer = new Container(sugarContainerVolume);
@@ -91,7 +91,7 @@ public class CoffeMachine {
     }
 
     public void emptyCassier() {
-        System.out.println(money + " of hryvnia was removed from coffee machine");
+        System.out.println(money + " hrn was removed from coffee machine");
         money = 0;
     }
 

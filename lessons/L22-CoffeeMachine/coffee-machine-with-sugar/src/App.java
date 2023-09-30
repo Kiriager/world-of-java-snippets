@@ -1,7 +1,6 @@
-public class Task {
+public class App {
   public static void main(String[] args) {
-    CoffeMachine myMachine = new CoffeMachine(500, 
-      500, 500);
+    CoffeeMachine myMachine = new CoffeeMachine(500, 500, 500);
     myMachine.loadIngridients(1000, 2000, 800);
 
     for (int i = 0; i < 5; i++) {

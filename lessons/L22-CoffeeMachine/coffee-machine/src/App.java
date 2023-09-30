@@ -1,9 +1,9 @@
-public class Task {
+public class App {
   public static void main(String[] args) {
-    CoffeMachine.setBasePrice(26);
-    CoffeMachine.setPriceIncrement(7);
+    CoffeeMachine.setBasePrice(26);
+    CoffeeMachine.setPriceIncrement(7);
 
-    CoffeMachine myMachine = new CoffeMachine(
+    CoffeeMachine myMachine = new CoffeeMachine(
         500, 700);
 
     myMachine.loadIngridients(110, 1000);
@@ -16,6 +16,8 @@ public class Task {
       myMachine.makeCoffee(true, false);
       myMachine.printState();
     }
+
+    myMachine.emptyCassier();
   }
 }
 

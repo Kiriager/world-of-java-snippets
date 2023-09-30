@@ -1,4 +1,4 @@
-public class CoffeMachine {
+public class CoffeeMachine {
     private static final int COFFEE_PER_CUP = 20;
     private static final int MILK_PER_CUP = 15;
     private static final int DEFAULT_CONTAINER_VOLUME = 1500;
@@ -9,17 +9,17 @@ public class CoffeMachine {
     private static int basePrice = DEFAULT_BASE_PRICE;
     private static int priceIncrement = DEFAULT_PRICE_INCREMENT;
 
-    Container coffeeContainer;
-    Container milkContainer;
+    private Container coffeeContainer;
+    private Container milkContainer;
 
     private int money = 0;
 
-    public CoffeMachine() {
+    public CoffeeMachine() {
         coffeeContainer = new Container(DEFAULT_CONTAINER_VOLUME);
         milkContainer = new Container(DEFAULT_CONTAINER_VOLUME);
     }
 
-    public CoffeMachine(int milkContainerVolume, int coffeeContainerVolume) {
+    public CoffeeMachine(int milkContainerVolume, int coffeeContainerVolume) {
         coffeeContainer = new Container(coffeeContainerVolume);
         milkContainer = new Container(milkContainerVolume);
     }
