@@ -6,10 +6,12 @@ public class MirrorBot extends TelegramLongPollingBot {
   @Override
   public void onUpdateReceived(Update update) {
     if (update.hasMessage() && update.getMessage().hasText()) {
+      // cтворюємо об'єкт повідомлення-відповіді
       SendMessage myMessage = new SendMessage();
-
+      // визначаємо чат та текст повідомлення
       myMessage.setChatId(update.getMessage().getChatId());
       myMessage.setText(update.getMessage().getText());
+      //відправку повідомлення загортаємо в try...catch
       try {
         execute(myMessage);
       } catch (Exception e) {
