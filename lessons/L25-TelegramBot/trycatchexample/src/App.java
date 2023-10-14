@@ -3,18 +3,19 @@ public class App {
     int x = 10;
     int y = 0;
 
-    // Code that breaks the programm:
+    // Код, що зупинив би виконання програми:
     // System.out.println(x / y);
 
-    // Code that handles the error
+    // Код, що перехоплює помилку
     try {
       System.out.println(x / y);
     } catch (Exception e) {
-      System.err.println(e);
-      e.printStackTrace();
+      // виводимо інформацію про помилку
+      System.err.println(e); 
+      // виводимо також інформацію про те, де виникла помилка
+      e.printStackTrace(); 
     }
 
-    // System.out.println(x / 0);
     System.out.println("Final code line is here!");
   }
 }
