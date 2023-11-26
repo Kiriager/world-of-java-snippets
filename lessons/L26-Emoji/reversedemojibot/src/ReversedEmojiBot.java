@@ -6,6 +6,8 @@ import com.vdurmont.emoji.Emoji;
 import com.vdurmont.emoji.EmojiManager;
 
 public class ReversedEmojiBot extends TelegramLongPollingBot {
+  public static final String UNKNOWN_EMOJI_MESSAGE = "Sorry... I don't know an emoji with this unicode";
+
   @Override
   public void onUpdateReceived(Update update) {
     if (update.hasMessage() && update.getMessage().hasText()) {
@@ -25,18 +27,18 @@ public class ReversedEmojiBot extends TelegramLongPollingBot {
   private String getEmojiInfo(String messageText) {
     Emoji emoji = EmojiManager.getByUnicode(messageText);
     if (emoji == null) {
-      return "Sorry... I don't know emoji with your unicode";
+      return UNKNOWN_EMOJI_MESSAGE;
     }
     return EmojiManager.getByUnicode(messageText).getDescription();
   }
 
   @Override
   public String getBotUsername() {
-    return "KiriagerBot";
+    return "BotUsername";
   }
 
   @Override
   public String getBotToken() {
-    return "5951902917:AAFwhQPmsKdBOT2gngpmSdUh9nh59R0FF6E";
+    return "BotToken";
   }
 }
