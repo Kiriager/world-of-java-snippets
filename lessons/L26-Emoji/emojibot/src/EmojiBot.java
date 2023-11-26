@@ -32,12 +32,12 @@ public class EmojiBot extends TelegramLongPollingBot {
 
    @Override
   public String getBotUsername() {
-    return "KiriagerBot";
+    return "BotUsername";
   }
 
   @Override
   public String getBotToken() {
-    return "5951902917:AAFwhQPmsKdBOT2gngpmSdUh9nh59R0FF6E";
+    return "BotToken";
   }
 
 }
