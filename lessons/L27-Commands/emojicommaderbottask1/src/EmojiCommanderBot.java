@@ -7,9 +7,14 @@ import com.vdurmont.emoji.EmojiParser;
 public class EmojiCommanderBot extends TelegramLongPollingBot {
   private static final String UNKNOWN_COMMAND_ANSWER_TEXT = "Sorry, I don't know this command... :confused: Try to use one from menu.";
   private static final String NOT_COMMAND_ANSWER_TEXT = "It's not a command! :confused:";
+
   public static final String SHOW_CAT_COMMAND = "/show_cat";
   public static final String SHOW_DOG_COMMAND = "/show_dog";
   public static final String SHOW_BIRD_COMMAND = "/show_bird";
+
+  public static final String CAT_ALIAS = ":cat:";
+  public static final String DOG_ALIAS = ":dog:";
+  public static final String BIRD_ALIAS = ":bird:";
 
   @Override
   public void onUpdateReceived(Update update) {
@@ -33,13 +38,13 @@ public class EmojiCommanderBot extends TelegramLongPollingBot {
 
   private String getResponseTextForCommand(String commandText) {
     if (commandText.equals(SHOW_CAT_COMMAND)) {
-      return EmojiParser.parseToUnicode(":cat:");
+      return EmojiParser.parseToUnicode(CAT_ALIAS);
     }
     if (commandText.equals(SHOW_DOG_COMMAND)) {
-      return EmojiParser.parseToUnicode(":dog:");
+      return EmojiParser.parseToUnicode(DOG_ALIAS);
     }
     if (commandText.equals(SHOW_BIRD_COMMAND)) {
-      return EmojiParser.parseToUnicode(":bird:");
+      return EmojiParser.parseToUnicode(BIRD_ALIAS);
     }
 
     return EmojiParser.parseToUnicode(UNKNOWN_COMMAND_ANSWER_TEXT);
