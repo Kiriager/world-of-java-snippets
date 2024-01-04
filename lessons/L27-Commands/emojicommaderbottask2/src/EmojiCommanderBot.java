@@ -5,7 +5,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import com.vdurmont.emoji.EmojiParser;
 
 public class EmojiCommanderBot extends TelegramLongPollingBot {
-  public static final String UNKNOWN_COMMAND_ANSWER_TEXT = "Sorry, I don't know this command... :confused: Try to use one from menu.";
+    public static final String UNKNOWN_COMMAND_ANSWER_TEXT = "Sorry, I don't know this command... :confused: Try to use one from menu.";
   public static final String NOT_COMMAND_ANSWER_TEXT = "It's not a command! :confused:";
 
   public static final String START_COMMAND = "/start";
